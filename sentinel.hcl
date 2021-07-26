@@ -1,4 +1,4 @@
 policy "bridgecrew" {
-  source            = "terraform/aws/"
+  source            = "."
   enforcement_level = "hard-mandatory"
 }
