@@ -1,4 +1,4 @@
 policy "bridgecrew" {
-  source            = "./sentinel.hcl"
+  source            = "./bridgecrew.sentinel"
   enforcement_level = "hard-mandatory"
 }
