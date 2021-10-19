@@ -19,14 +19,7 @@ resource aws_iam_role "iam_for_eks" {
   name               = "${local.resource_prefix.value}-iam-for-eks"
   assume_role_policy = data.aws_iam_policy_document.iam_policy_eks.json
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/eks.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "bd7adb80-641d-458c-afcb-7444f6cf62c9"
+    yor_trace = "ed9f1366-5497-4a42-a327-645586e23d08"
   }
 }
 
@@ -45,15 +38,8 @@ resource aws_vpc "eks_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    Name                 = "${local.resource_prefix.value}-eks-vpc"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/eks.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "c8a9e1c6-7d3e-4082-bac8-4af8695b7482"
+    Name      = "${local.resource_prefix.value}-eks-vpc"
+    yor_trace = "2a1b6729-fdd2-4f4a-ab3f-d01d50c8dc59"
   }
 }
 
@@ -65,15 +51,8 @@ resource aws_subnet "eks_subnet1" {
   tags = {
     Name                                             = "${local.resource_prefix.value}-eks-subnet"
     "kubernetes.io/cluster/${local.eks_name.value}"  = "shared"
-    git_commit                                       = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file                                         = "terraform/aws/eks.tf"
-    git_last_modified_at                             = "2020-06-16 14:46:24"
-    git_last_modified_by                             = "nimrodkor@gmail.com"
-    git_modifiers                                    = "nimrodkor"
-    git_org                                          = "try-bridgecrew"
-    git_repo                                         = "terragoat"
     "kubernetes.io/cluster/$${local.eks_name.value}" = "shared"
-    yor_trace                                        = "52b1253b-b6b6-4f12-8537-e37996f2064b"
+    yor_trace                                        = "5f942f8f-536d-4b3f-9531-54a11749197b"
   }
 }
 
@@ -85,15 +64,8 @@ resource aws_subnet "eks_subnet2" {
   tags = {
     Name                                             = "${local.resource_prefix.value}-eks-subnet2"
     "kubernetes.io/cluster/${local.eks_name.value}"  = "shared"
-    git_commit                                       = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file                                         = "terraform/aws/eks.tf"
-    git_last_modified_at                             = "2020-06-16 14:46:24"
-    git_last_modified_by                             = "nimrodkor@gmail.com"
-    git_modifiers                                    = "nimrodkor"
-    git_org                                          = "try-bridgecrew"
-    git_repo                                         = "terragoat"
     "kubernetes.io/cluster/$${local.eks_name.value}" = "shared"
-    yor_trace                                        = "76599b94-8cbc-430e-9dd5-92efeda9cea1"
+    yor_trace                                        = "d8a50909-fbbe-4db4-aba1-abc9afdf1006"
   }
 }
 
@@ -111,14 +83,7 @@ resource aws_eks_cluster "eks_cluster" {
     "aws_iam_role_policy_attachment.policy_attachment-AmazonEKSServicePolicy",
   ]
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/eks.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "939faa1c-a25b-4d31-ad75-b713c840fe87"
+    yor_trace = "a158bfc9-5985-49d9-933e-e981c96c0f3e"
   }
 }
 
