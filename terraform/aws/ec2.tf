@@ -18,15 +18,8 @@ export AWS_DEFAULT_REGION=us-west-2
 echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
   tags = {
-    Name                 = "${local.resource_prefix.value}-ec2"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "cff9836a-83cb-4449-80fb-708d70c3d82f"
+    Name      = "${local.resource_prefix.value}-ec2"
+    yor_trace = "2ce3983e-b8fc-4f7a-ae07-5ba17155cbcf"
   }
 }
 
@@ -36,15 +29,8 @@ resource "aws_ebs_volume" "web_host_storage" {
   #encrypted         = false  # Setting this causes the volume to be recreated on apply 
   size = 1
   tags = {
-    Name                 = "${local.resource_prefix.value}-ebs"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "39317050-34d5-449d-a9fc-818eb1774f33"
+    Name      = "${local.resource_prefix.value}-ebs"
+    yor_trace = "27a41c36-5add-4bfc-ab4f-81bffba8f9cc"
   }
 }
 
@@ -53,15 +39,8 @@ resource "aws_ebs_snapshot" "example_snapshot" {
   volume_id   = "${aws_ebs_volume.web_host_storage.id}"
   description = "${local.resource_prefix.value}-ebs-snapshot"
   tags = {
-    Name                 = "${local.resource_prefix.value}-ebs-snapshot"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "5b7df4d5-a191-4369-aca3-b2138d439a18"
+    Name      = "${local.resource_prefix.value}-ebs-snapshot"
+    yor_trace = "2e1ee0b8-a9b4-44bc-9100-b78c29a7dba4"
   }
 }
 
@@ -100,14 +79,7 @@ resource "aws_security_group" "web-node" {
   }
   depends_on = [aws_vpc.web_vpc]
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "9b1c81bd-21c2-469e-bc39-80a54aad8888"
+    yor_trace = "e40a30a6-d1f5-4bc9-a4be-0c23d3f87e3d"
   }
 }
 
@@ -116,15 +88,8 @@ resource "aws_vpc" "web_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    Name                 = "${local.resource_prefix.value}-vpc"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "307d74c8-c192-43ff-ac94-898b943be6ef"
+    Name      = "${local.resource_prefix.value}-vpc"
+    yor_trace = "fe630d53-53a9-466e-bbf5-5d8d29086fee"
   }
 }
 
@@ -135,15 +100,8 @@ resource "aws_subnet" "web_subnet" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-subnet"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "eb2d1a82-858e-442e-b468-e48b241525b6"
+    Name      = "${local.resource_prefix.value}-subnet"
+    yor_trace = "4345f4c9-454e-4984-bb6a-bfd3fc04e76e"
   }
 }
 
@@ -154,15 +112,8 @@ resource "aws_subnet" "web_subnet2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-subnet2"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "21a68ad1-a390-4103-ae3f-7ae03a08db3a"
+    Name      = "${local.resource_prefix.value}-subnet2"
+    yor_trace = "569fbb59-38f2-4075-8451-baa64572fcce"
   }
 }
 
@@ -171,15 +122,8 @@ resource "aws_internet_gateway" "web_igw" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-igw"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "10a101ef-338e-456d-bddd-a495a798d672"
+    Name      = "${local.resource_prefix.value}-igw"
+    yor_trace = "50a808e1-8485-4004-9dc6-77acc8e9e370"
   }
 }
 
@@ -187,15 +131,8 @@ resource "aws_route_table" "web_rtb" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-rtb"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "b9682f4c-fdc0-425b-92f2-79875e2076a2"
+    Name      = "${local.resource_prefix.value}-rtb"
+    yor_trace = "790bb444-0844-4a34-8d41-5a7876041fa8"
   }
 }
 
@@ -225,15 +162,8 @@ resource "aws_network_interface" "web-eni" {
   private_ips = ["172.16.10.100"]
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-primary_network_interface"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "bbdb7f22-2f8e-41f2-b16a-620f132f2dd1"
+    Name      = "${local.resource_prefix.value}-primary_network_interface"
+    yor_trace = "cdbf3a8d-50b5-4d5f-82d1-f0b2ead14ce1"
   }
 }
 
@@ -245,16 +175,9 @@ resource "aws_flow_log" "vpcflowlogs" {
   vpc_id               = aws_vpc.web_vpc.id
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-flowlogs"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "cf63bd13-dfcb-4361-a9e2-8729714935c9"
+    Name        = "${local.resource_prefix.value}-flowlogs"
+    Environment = local.resource_prefix.value
+    yor_trace   = "2149925e-3423-4709-a761-495b5991ef32"
   }
 }
 
@@ -263,16 +186,9 @@ resource "aws_s3_bucket" "flowbucket" {
   force_destroy = true
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-flowlogs"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/ec2.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "b2b673c8-31f9-46cf-a8f5-2be454893f3b"
+    Name        = "${local.resource_prefix.value}-flowlogs"
+    Environment = local.resource_prefix.value
+    yor_trace   = "c19f95f9-7cda-4b5c-b62c-a50baaa34813"
   }
 }
 
