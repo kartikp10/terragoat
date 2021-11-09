@@ -14,16 +14,9 @@ resource "azurerm_sql_server" "example" {
   administrator_login          = "ariel"
   administrator_login_password = "Aa12345678"
   tags = {
-    environment          = var.environment
-    terragoat            = "true"
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "21c91803-d96d-4147-be87-7f08cda88864"
+    environment = var.environment
+    terragoat   = "true"
+    yor_trace   = "e0bf1b09-e86e-4099-9f75-5f90d5d4297a"
   }
 }
 
@@ -58,14 +51,7 @@ resource "azurerm_mysql_server" "example" {
   public_network_access_enabled     = true
   ssl_enforcement_enabled           = false
   tags = {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "3f28ffc5-e9e7-4830-8779-031e52933166"
+    yor_trace = "2559dab5-b9d4-42e1-af7f-52aa089b0b4e"
   }
 }
 
@@ -83,14 +69,7 @@ resource "azurerm_postgresql_server" "example" {
   version                      = "9.5"
   ssl_enforcement_enabled      = false
   tags = {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/sql.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "e5dfc9ef-49de-4e8a-a61e-fad7cc4844b6"
+    yor_trace = "3f31d62b-d9db-48c5-ad77-5c8920438f8c"
   }
 }
 
