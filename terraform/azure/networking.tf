@@ -132,4 +132,7 @@ resource azurerm_network_watcher_flow_log "flow_log" {
     enabled = false
     days    = 10
   }
+  tags = {
+    yor_trace = "be6f937c-0237-4c17-a83f-cf7895dfa0f1"
+  }
 }
