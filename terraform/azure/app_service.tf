@@ -8,14 +8,7 @@ resource azurerm_app_service_plan "example" {
     size = "S1"
   }
   tags = {
-    git_commit           = "898d5beaec7ffdef6df0d7abecff407362e2a74e"
-    git_file             = "terraform/azure/app_service.tf"
-    git_last_modified_at = "2020-06-17 12:59:55"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "f5871797-060b-42c1-a95e-f9090b56ed77"
+    yor_trace = "b9b49698-5f5d-4b23-adf1-03a1f32327e1"
   }
 }
 
@@ -29,14 +22,7 @@ resource azurerm_app_service "app-service1" {
     min_tls_version = "1.1"
   }
   tags = {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/app_service.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "20163505-c921-43bf-a6ce-4dbcf50a4406"
+    yor_trace = "1d60c7a4-1234-41c1-8505-0f363603b5ab"
   }
 }
 
@@ -51,14 +37,7 @@ resource azurerm_app_service "app-service2" {
     enabled = false
   }
   tags = {
-    git_commit           = "81738b80d571fa3034633690d13ffb460e1e7dea"
-    git_file             = "terraform/azure/app_service.tf"
-    git_last_modified_at = "2020-06-19 21:14:50"
-    git_last_modified_by = "Adin.Ermie@outlook.com"
-    git_modifiers        = "Adin.Ermie/nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "1c004765-6fe5-4bcb-9035-553f46ad4bb4"
+    yor_trace = "7404d1ff-8da5-4c67-b230-64bc25013979"
   }
 }
 
