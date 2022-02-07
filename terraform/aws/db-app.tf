@@ -21,16 +21,9 @@ resource "aws_db_instance" "default" {
   publicly_accessible     = true
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-rds"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "fbcbf0b9-8ede-4eb1-bdc1-7d5abcb42881"
+    Name        = "${local.resource_prefix.value}-rds"
+    Environment = local.resource_prefix.value
+    yor_trace   = "aa4d55d3-0673-4517-ad60-9757c5b4c143"
   }
 
   # Ignore password changes from tf plan diff
@@ -46,16 +39,9 @@ resource "aws_db_option_group" "default" {
   option_group_description = "Terraform OG"
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-og"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "fc499810-8ac3-4807-bd72-8d55904a02e8"
+    Name        = "${local.resource_prefix.value}-og"
+    Environment = local.resource_prefix.value
+    yor_trace   = "de995d0c-7fe3-4221-ae88-bc3ca657ce71"
   }
 }
 
@@ -77,16 +63,9 @@ resource "aws_db_parameter_group" "default" {
   }
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-pg"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "d729e4b9-f8bc-4d0d-81f4-c226191ad170"
+    Name        = "${local.resource_prefix.value}-pg"
+    Environment = local.resource_prefix.value
+    yor_trace   = "98b0ec05-4d88-4525-aa1f-2ab2e38b8b7c"
   }
 }
 
@@ -96,16 +75,9 @@ resource "aws_db_subnet_group" "default" {
   description = "Terraform DB Subnet Group"
 
   tags = {
-    Name                 = "sg-${local.resource_prefix.value}"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "3ac7f6bf-120a-496c-9028-2638b399e8b6"
+    Name        = "sg-${local.resource_prefix.value}"
+    Environment = local.resource_prefix.value
+    yor_trace   = "b456a903-c347-461f-9d53-f92edfead36d"
   }
 }
 
@@ -114,16 +86,9 @@ resource "aws_security_group" "default" {
   vpc_id = aws_vpc.web_vpc.id
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-rds-sg"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "f8a42a90-11ea-42e1-8f25-aa0375ff1632"
+    Name        = "${local.resource_prefix.value}-rds-sg"
+    Environment = local.resource_prefix.value
+    yor_trace   = "01e25177-330f-4f26-97ac-39cd039195b3"
   }
 }
 
@@ -151,14 +116,7 @@ resource "aws_iam_instance_profile" "ec2profile" {
   name = "${local.resource_prefix.value}-profile"
   role = "${aws_iam_role.ec2role.name}"
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "a9e84db7-31c4-4440-a474-2802c7181967"
+    yor_trace = "2b0e89d6-68de-41be-b7e3-c74e8f6e8ae5"
   }
 }
 
@@ -183,16 +141,9 @@ resource "aws_iam_role" "ec2role" {
 EOF
 
   tags = {
-    Name                 = "${local.resource_prefix.value}-role"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "ee26bbfe-daea-4177-8be8-b15279a21401"
+    Name        = "${local.resource_prefix.value}-role"
+    Environment = local.resource_prefix.value
+    yor_trace   = "f80a5c0f-3e39-451b-afae-34c6c8fa6ce9"
   }
 }
 
@@ -392,15 +343,8 @@ sudo chown root:root /var/www/html/index.php
 
 EOF
   tags = {
-    Name                 = "${local.resource_prefix.value}-dbapp"
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/db-app.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "b3b25ba1-64e2-46d9-a359-49848c7d43ed"
+    Name      = "${local.resource_prefix.value}-dbapp"
+    yor_trace = "d910b54a-ac46-4b41-a3b8-97d2a3dd0f3b"
   }
 }
 
