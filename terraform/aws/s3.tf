@@ -7,19 +7,9 @@ resource "aws_s3_bucket" "data" {
   acl           = "public-read"
   force_destroy = true
   tags = {
-    Name                 = "${local.resource_prefix.value}-data"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "fc8c2d7a-1997-4fc2-95c1-277cba5c2a38"
-  }
-  versioning {
-    enabled = "${var.versioning_enabled}"
+    Name        = "${local.resource_prefix.value}-data"
+    Environment = local.resource_prefix.value
+    yor_trace   = "6cf39d15-3c9f-465b-bbaf-5ac4bc5bcfbc"
   }
 }
 
@@ -28,16 +18,9 @@ resource "aws_s3_bucket_object" "data_object" {
   key    = "customer-master.xlsx"
   source = "resources/customer-master.xlsx"
   tags = {
-    Name                 = "${local.resource_prefix.value}-customer-master"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "b77af90c-712d-4209-90ad-d46815ab3eb7"
+    Name        = "${local.resource_prefix.value}-customer-master"
+    Environment = local.resource_prefix.value
+    yor_trace   = "5634753d-7581-4dd5-8574-89c1a14de988"
   }
 }
 
@@ -49,16 +32,9 @@ resource "aws_s3_bucket" "financials" {
   acl           = "private"
   force_destroy = true
   tags = {
-    Name                 = "${local.resource_prefix.value}-financials"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "cecbef60-a2ea-4710-9d45-b865340e6095"
+    Name        = "${local.resource_prefix.value}-financials"
+    Environment = local.resource_prefix.value
+    yor_trace   = "06b5e68b-efd5-4351-a1e3-faa4be6fc3b7"
   }
 
 }
@@ -73,16 +49,9 @@ resource "aws_s3_bucket" "operations" {
   }
   force_destroy = true
   tags = {
-    Name                 = "${local.resource_prefix.value}-operations"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "e62dfbc0-cc44-408b-a26a-13938d22e2f0"
+    Name        = "${local.resource_prefix.value}-operations"
+    Environment = local.resource_prefix.value
+    yor_trace   = "fb7016dd-b8e8-4842-81fd-be74d0c57b47"
   }
 
 }
@@ -100,14 +69,7 @@ resource "aws_s3_bucket" "data_science" {
   }
   force_destroy = true
   tags = {
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "25565a41-2c9e-45f2-a9e9-6c15b7afcfb6"
+    yor_trace = "b2eaee5d-bef7-43c7-9d5e-6f732b913ed7"
   }
 }
 
@@ -127,15 +89,8 @@ resource "aws_s3_bucket" "logs" {
   }
   force_destroy = true
   tags = {
-    Name                 = "${local.resource_prefix.value}-logs"
-    Environment          = local.resource_prefix.value
-    git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
-    git_last_modified_at = "2020-06-16 14:46:24"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
-    git_repo             = "terragoat"
-    yor_trace            = "ce72f84f-4cb6-4f67-b540-54d7e998df19"
+    Name        = "${local.resource_prefix.value}-logs"
+    Environment = local.resource_prefix.value
+    yor_trace   = "e7341a90-e2c3-4505-b302-d6a52db3b5e4"
   }
 }
