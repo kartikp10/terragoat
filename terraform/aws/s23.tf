@@ -61,6 +61,9 @@ resource "aws_s3_bucket" "financials" {
     yor_trace            = "cecbef60-a2ea-4710-9d45-b865340e6095"
   }
 
+  versioning {
+    enabled = true
+  }
 }
 
 resource "aws_s3_bucket" "operations" {
